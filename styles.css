@@ -1,28 +1,38 @@
 /*  your css code here. If applicable */
-#verification_heading {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
- #verification_subtext {
-        font-size: 16px;
-        margin-bottom: 20px;
-      }
-.code-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-.code {
-        width: 40px;
-        height: 40px;
-        margin: 0 10px;
-        font-size: 24px;
-        text-align: center;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        outline: none;
-      }
- .code:focus {
-        border: 2px solid blue;
-      }
+h1{
+	text-align: center;
+}
+#verification_subtext{
+	font-size:15px;
+	text-align:center;
+	color:grey;
+}
+.code-container{
+	display: flex;
+	justify-content: center;
+	gap: 40px 20px;
+	margin-top: 40px;
+	
+}
+.code{
+	width: 40px;
+	height: 40px;
+	align-items: center;
+	border: 0.01px solid grey; ;
+    border-radius: 5px;
+	text-align: center;
+}
+
+.code:focus{
+	outline: none;
+
+}
+
+#last-text{
+	font-size: 15px;
+	background-color: #D9DDDc;
+	color: grey;
+	text-align: center;
+	
+	margin: 40px 110px;
+}

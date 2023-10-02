@@ -1,14 +1,28 @@
 //your JS code here. If required.
- const inputs = document.querySelectorAll('.code');
- for (let i = 0; i < inputs.length; i++) {
-	 inputs[i].addEventListener('input', function() {
-		 if (this.value.length === this.maxLength) {
-            inputs[i + 1].focus();
-          }
-		  });
-	  inputs[i].addEventListener('keydown', function(event) {
-          if (event.keyCode === 8 && this.value.length === 0) {
-            inputs[i - 1].focus();
-          }
-        });
-      }
+let input = document.getElementsByClassName('code');
+for(let i=0; i< input.length; i++){
+		input[i].addEventListener('keyup', (event) =>{
+	
+			let currentElement = event.target ;
+          if(event.key === "Backspace"){
+			    let prevElement = currentElement.previousElementSibling;
+			  if(prevElement){
+					 prevElement.focus();
+				 }
+			  return;
+		  }
+			let code = event.key.charCodeAt(0);
+			if(48 <= code && code<=57) {
+				// if input is num we will target next element
+			let nextElement  = currentElement.nextElementSibling;
+				if(nextElement) {
+					nextElement.focus();
+				}
+				
+			}
+			else{
+					console.log(event.target.value);
+					event.target.value = "";
+				}
+			})
+		}
