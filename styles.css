@@ -1,0 +1,30 @@
+ .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    
+    .box {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: center;
+      margin: 0 5px;
+      font-size: 20px;
+      outline: none;
+    }
+    
+    #heading {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 50px;
+    }
+    
+    #para {
+      text-align: center;
+      font-size: 16px;
+      margin-top: 10px;
+      color: #888;
+    }

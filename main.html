@@ -1,70 +1,27 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-  <title>OTP Verification</title>
-  <style>
-    .code-container {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .code {
-      width: 40px;
-      height: 40px;
-      margin: 0 5px;
-      font-size: 24px;
-      text-align: center;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      outline: none;
-    }
-
-    #verification_heading {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    #verification_subtext {
-      font-size: 16px;
-      color: #888;
-      margin-bottom: 20px;
-    }
-  </style>
+	<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1 id="verification_heading">OTP Verification</h1>
-  <h2 id="verification_subtext">Please enter the 6-digit code sent to your mobile number.</h2>
+	<!-- the entire body must be written by student -->
+    <script type="text/javascript" src="./script.js">
+</script>
+
+  <h2 id="heading">OTP Verification</h2>
+  <p id="para">Please enter the 6-digit OTP code below:</p>
   
-  <div class="code-container">
-    <input type="text" class="code" maxlength="1" autofocus />
-    <input type="text" class="code" maxlength="1" />
-    <input type="text" class="code" maxlength="1" />
-    <input type="text" class="code" maxlength="1" />
-    <input type="text" class="code" maxlength="1" />
-    <input type="text" class="code" maxlength="1" />
+  <div class="container">
+    <input type="text" class="box" maxlength="1" autofocus>
+    <input type="text" class="box" maxlength="1">
+    <input type="text" class="box" maxlength="1">
+    <input type="text" class="box" maxlength="1">
+    <input type="text" class="box" maxlength="1">
+    <input type="text" class="box" maxlength="1">
   </div>
-
-  <script>
-    const codeInputs = document.querySelectorAll('.code');
-
-    codeInputs.forEach((input, index) => {
-      input.addEventListener('input', (event) => {
-        const value = event.target.value;
-        if (value.length === 1) {
-          if (index < codeInputs.length - 1) {
-            codeInputs[index + 1].focus();
-          }
-        }
-      });
-
-      input.addEventListener('keydown', (event) => {
-        if (event.key === 'Backspace' && index > 0) {
-          codeInputs[index - 1].focus();
-        }
-      });
-    });
-  </script>
 </body>
+
 </html>
